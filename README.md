@@ -37,7 +37,7 @@ To customize the keywords and other stuff, <kbd>command</kbd> + <kbd>,</kbd> (Wi
 | todohighlight.keywordsPattern  | string | N/A | Specify keywords via RegExp instead of `todohighlight.keywords` one by one. NOTE that if this presents, `todohighlight.keywords` will be ignored. And REMEMBER to escapse the back slash if there's any in your regexp (using \\ instead of signle back slash). |
 | todohighlight.defaultStyle | object | N/A | Specify the default style for custom keywords, if not specified, build in default style will be applied. [See all available properties on VSCode doc DecorationRenderOptions section](https://code.visualstudio.com/api/references/vscode-api#DecorationRenderOptions) |
 | todohighlight.include | array | [<br>`"**/*.js"`,<br>`"**/*.jsx"`,<br>`"**/*.ts"`,<br>`"**/*.tsx",`<br>`"**/*.html"`,<br>`"**/*.php"`,<br>`"**/*.css",`<br>`"**/*.scss"`<br>] | Glob patterns that defines the files to search for. Only include files you need, DO NOT USE `{**/*.*}` for both permormance and avoiding binary files reason. <br> For backwards compatability, a string combine all the patterns is also valid `"{**/*.js,**/*.jsx,**/*.ts,**/*.tsx,**/*.html,**/*.php,**/*.css,**/*.scss}"` |
-| todohighlight.exclude | array | [<br>`"**/node_modules/**"`,<br>`"**/dist/**",`<br>`"**/bower_components/**"`,<br>`"**/build/**",`<br>`"**/.vscode/**"`,<br>`"**/.github/**"`,<br>`"**/_output/**"`,<br>`"**/*.min.*"`,<br>`"**/*.map"`<br>] | Glob pattern that defines files and folders to exclude while listing annotations. <br> For backwards compatability, a string combine all the patterns is also valid `"{**/node_modules/**,**/bower_components/**,**/dist/**,**/build/**,**/.vscode/**,**/_output/**,**/*.min.*,**/*.map}"` |
+| todohighlight.exclude | array | [<br>`"**/node_modules/**"`,<br>`"**/dist/**",`<br>`"**/bower_components/**",`<br>`"**/build/**",`<br>`"**/.vscode/**",`<br>`"**/.github/**",`<br>`"**/_output/**",`<br>`"**/*.min.*"`,<br>`"**/*.map"`<br>] | Glob pattern that defines files and folders to exclude while listing annotations. <br> For backwards compatability, a string combine all the patterns is also valid `"{**/node_modules/**,**/bower_components/**,**/dist/**,**/build/**,**/.vscode/**,**/_output/**,**/*.min.*,**/*.map}"` |
 | todohighlight.maxFilesForSearch | number | 5120 | Max files for searching, mostly you don't need to configure this. |
 | todohighlight.toggleURI | boolean | false | If the file path within the output channel not clickable, set this to true to toggle the path patten between `<path>#<line>` and `<path>:<line>:<column>`. |
 
@@ -126,4 +126,15 @@ This extension contributes the following commands to the Command palette.
  Basically the extension auto detects the OS platform.
 
  If you find that the file path is not clickable, set `todohighlight.toggleURI` to `true` to toggle the file pattern.
-  
+
+### Cloning the Repository
+
+To clone the repository, you can use the following command:
+
+```sh
+gh repo clone wayou/vscode-todo-highlight
+```
+
+#### Prerequisites
+
+Make sure you have the GitHub CLI installed. You can download and install it from [here](https://cli.github.com/).
